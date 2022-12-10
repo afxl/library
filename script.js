@@ -153,7 +153,7 @@ const store=function(){
   localStorage.setItem("data",JSON.stringify(database))
 }
 const localData=JSON.parse(localStorage.getItem("data"))
-database=localData
+database=localData?localData:database;
 for(i in database){
   for(j in database[i].date){
     database[i].date[j] = new Date(database[i].date[j]);
