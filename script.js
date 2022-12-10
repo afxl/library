@@ -11,10 +11,10 @@ let curEl = document.querySelector("#homepage");
 let database = {
   a: {
     pin: "1111",
-    books: ["harry potter","stranger"],
-    bookid: ["1111","2222"],
-    issueFor: [31,1],
-    date: [new Date(),new Date()],
+    books: ["harry potter", "stranger"],
+    bookid: ["1111", "2222"],
+    issueFor: [31, 1],
+    date: [new Date(), new Date()],
   },
 };
 const displayBooks = function () {
@@ -58,7 +58,7 @@ const handleLength =function(el){
     el.value = el.value.slice(0, 4);
   }  
 }
-document.querySelectorAll("input").forEach(el=>el.addEventListener("input",function(){
+document.querySelectorAll("input").forEach(el=>el.addEventListener("input",function(e){
   document.querySelectorAll(".popup").forEach(el=> el.classList.add("hidden"))
 }))
 submit.addEventListener("click",function(){
@@ -123,6 +123,7 @@ document.querySelector(".submit-return").addEventListener("click",function(){
     let index = database[curUser].bookid.indexOf(returnId.value);
     ["bookid", "books", "issueFor", "date"].forEach((el) => database[curUser][el].splice(index,1));
     document.querySelectorAll("input").forEach((el) => (el.value = ""));
+    displayManager(document.querySelector("#crud"));
     document.querySelector(".return-form").insertAdjacentHTML('beforeend', `<p class="white popup">book submitted </p>`)
     store()
   })
@@ -158,4 +159,10 @@ for(i in database){
     database[i].date[j] = new Date(database[i].date[j]);
   }
 }
-console.log(typeof database[curUser].date[0]);
+database["a"] = {
+  pin: "1111",
+  books: ["harry potter", "stranger"],
+  bookid: ["1111", "2222"],
+  issueFor: [31, 1],
+  date: [new Date(), new Date()],
+};
