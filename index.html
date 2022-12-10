@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <nav class="mb-1 d-flex row">
+            <p class="col-12 col-sm-2 ms-2">HOMEPAGE</p>
+            <p class="col-12 col-sm-2 hidden-p log hidden" data-page="#homepage">LOGIN</p>
+            <p class="col-12 col-sm-2 hidden-p hidden issue" data-page="#issue-form">ISSUE BOOK</p>
+            <p class="col-12 col-sm-2 hidden-p hidden ret" data-page="#return-form">RETURN BOOK</p>
+            <p class="col-12 col-sm-2 hidden-p hidden dir" data-page="#directory">DIRECTORY</p>
+        </nav>
+        <div id="homepage" class="">
+            <div class="row d-flex justify-content-center">
+                <div class="disp col-9 col-sm-6 col-md-3 login d-flex justify-content-center flex-column align-items-center">
+                    <div class="user-logo"><img src="https://www.svgrepo.com/show/3130/user.svg" alt=""></div>
+                    <p>login</p>
+                </div>
+                <div class="col-12 col-md-4">
+                    <form>
+                        <label for="name">NAME</label>
+                        <input type="text" id="username" placeholder="name">
+                        <label for="name" >PIN</label>
+                        <input type="password" id="userpin" placeholder="pin">
+                        <p class="hidden popup err">  !!! invalid fields</p>
+                        <div class="subm mt-4">SUBMIT</div>
+                   </form>
+                </div>
+            </div>
+        </div>
+        <div id="crud" class="hidden">
+            <div class="row d-flex justify-content-center">
+                <div data-page="#issue-form" id="issue-sel" class="disp col-9 col-sm-6 m-3 col-md-3 login d-flex justify-content-center flex-column align-items-center">
+                    <div class="user-logo"><img src="https://www.svgrepo.com/show/14436/book.svg" alt=""></div>
+                    <p>ISSUE A BOOK</p>
+                </div>
+                <div data-page="#return-form" id="return-sel" class="disp col-9 col-sm-6 m-3 col-md-3 login d-flex justify-content-center flex-column align-items-center">
+                    <div class="user-logo"><img src="https://www.svgrepo.com/show/412029/return.svg" alt=""></div>
+                    <p>RETURN A BOOK</p>
+                </div>
+                <div data-page="#directory" id="directory-sel" class="disp col-9 col-sm-6 m-3 col-md-3 login d-flex justify-content-center flex-column align-items-center">
+                    <div class="user-logo"><img src="https://www.svgrepo.com/show/347673/history.svg" alt=""></div>
+                    <p>SEE TRANSACTION history</p>
+                </div>
+            </div>
+
+        </div>
+        <div id="issue-form" class="hidden">
+            <div class="row d-flex justify-content-center">
+                <div class="col-10 col-sm-6">
+                    <form class="">
+                        <label for="bookName">BOOK NAME</label>
+                        <input type="text" id="bookName" placeholder="book name">
+                        <label for="name">BOOK ID</label>
+                        <input type="number" id="bookID" placeholder="****">
+                        <label for="name">DURATION IN DAYS</label>
+                        <input type="number" id="issueDuration" placeholder="DAYS">
+                        <p class="hidden popup err-issue"> !!! invalid fields</p>
+                        <div class="submit-book mt-4">SUBMIT</div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div id="return-form" class="hidden">
+            <div class="row d-flex justify-content-center">
+                <div class="col-6 return-form">
+                    <form>
+                        <label>BOOK ID</label>
+                        <input type="text" id="returnId"class="mb-3">
+                        <div class="submit-return"> RETURN</div>
+                        <p class="popup err-return hidden"> Book not found
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div id="directory" class="hidden">
+            <div class="row">
+                <div class="col-12 table-header">
+                    <div class="row">
+                        <div class="col-2">BOOK ID</div>
+                        <div class="col-4">BOOK NAME</div>
+                        <div class="col-2">ISSUE DATE</div>
+                        <div class="col-2">RETURN DATE</div>
+                        <div class="col-2">Fine</div>
+                    </div>         
+                </div>
+                <div class="row table">
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    
+</body>
+</html>

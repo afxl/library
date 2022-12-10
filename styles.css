@@ -1,0 +1,106 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+p{
+    margin:auto;
+}
+body{
+    background-color: #222222;
+    color: rgb(243, 8, 8);
+    overflow-x:hidden;
+}
+.container{
+    margin: 0;
+    margin-right: 0;
+    padding: 0;
+    min-width: 100vw;
+}
+#return-form{
+    color: rgb(222, 194, 153);
+}
+#issue-form{
+    color: rgb(31, 184, 54);
+}
+.blocks{
+    width: 100%;
+    margin-right: 0;
+}
+.blocks div{
+    overflow:hidden;
+}
+img{
+    width: 100%;
+    height: 100%;
+    filter: brightness(0) invert(1);
+}
+.user-logo{
+    width: 140px;
+    height: 140px;
+}
+/* .login{
+    text-align: center;
+} */
+input{
+    width: 100%;
+    height:30px;
+}
+.err{
+    color:yellow ;
+}
+#homepage .disp{
+    border:6px solid rgb(243, 8, 8) ;
+    border-radius: 16px;
+}
+#crud .disp {
+    border: 6px solid rgb(13, 5, 135);
+    border-radius: 16px;
+    color: rgb(72, 114, 214);
+}
+.white{
+    color: aliceblue;
+}
+.subm,.submit-book,.submit-return{
+    background-color: rgb(243, 8, 8);
+    color:aliceblue;
+    border: 0;
+    height: 36px;
+    width: 120px;
+    border-radius: 20px;
+    text-align: center;
+    padding-top: 6px;
+}
+.submit-book {
+    background-color: rgb(148, 227, 29);
+}
+.submit-return{
+    background-color: burlywood;
+}
+/* .row{
+    margin-left:0px;
+    margin-right:0px ;
+} */
+.row {
+    margin-right: 0;
+    margin-left: 0;
+    max-width: 100%;
+}
+.table-header div{
+    background-color: rgb(11, 11, 97);
+    color: aliceblue;
+}
+.table-header div,.table div{
+    border: 1px solid black;
+    padding: 0;
+}
+.datarow{
+    background-color: aliceblue;
+}
+nav {
+    min-height: 60px;
+    margin: auto;
+    border-bottom: 2px solid red;
+}
+.hidden {
+    display: none;
+}
